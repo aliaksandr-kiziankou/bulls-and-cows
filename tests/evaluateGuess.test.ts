@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { evaluateGuess } from '../src/logic/evaluateGuess';
+import { evaluateGuess } from '../src/logic/evaluateGuess.ts';
 
 describe('evaluateGuess', () => {
   it('should count bulls correctly', () => {
@@ -18,8 +18,8 @@ describe('evaluateGuess', () => {
 
   it('should count both bulls and cows', () => {
     expect(evaluateGuess('4271', '1234')).toEqual({
-      bulls: 0,
-      cows: 3,
+      bulls: 1,
+      cows: 2,
     });
   });
 
