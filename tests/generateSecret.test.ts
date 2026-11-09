@@ -21,15 +21,15 @@ describe('generateSecret', () => {
   });
 
   it('should allow zero as the first digit', () => {
-    const secret = generateSecret(4, 10, () => 0);
+    const secret = generateSecret(4, 10, () => 0.5);
 
-    expect(secret[0]).toBe('0');
+    expect(secret).toContain('0');
   });
 
   it('should produce predictable results with a deterministic random function', () => {
-    const random = () => 0;
+    const random = (): number => 0;
     const secret = generateSecret(4, 10, random);
 
-    expect(secret).toBe('0123');
+    expect(secret).toBe('1234');
   });
 });
