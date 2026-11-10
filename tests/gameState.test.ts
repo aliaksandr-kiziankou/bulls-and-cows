@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { createGameState, submitGuess } from '../src/logic/gameState';
+import { createGameState, submitGuess } from '../src/logic/gameState.ts';
 
 describe('createGameState', () => {
   it('should create a new game with empty history', () => {
